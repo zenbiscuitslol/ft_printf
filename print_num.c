@@ -6,7 +6,7 @@
 /*   By: pprejith <pprejith@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 17:36:52 by pprejith          #+#    #+#             */
-/*   Updated: 2025/05/19 16:41:37 by pprejith         ###   ########.fr       */
+/*   Updated: 2025/05/19 17:27:24 by pprejith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	print_num(int n)
 
 	len = 0;
 	if (n == -2147483648)
-		return(print_str("-2147483648"));
+		return (print_str("-2147483648"));
 	if (n < 0)
 	{
 		if (write(1, "-", 1) == -1)

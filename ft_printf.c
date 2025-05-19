@@ -6,7 +6,7 @@
 /*   By: pprejith <pprejith@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 16:09:37 by pprejith          #+#    #+#             */
-/*   Updated: 2025/05/19 16:38:13 by pprejith         ###   ########.fr       */
+/*   Updated: 2025/05/19 17:27:54 by pprejith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,3 @@ int	ft_printf(const char *str, ...)
 	}
 	return (va_end(args), num_char);
 }
-
