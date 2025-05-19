@@ -6,7 +6,7 @@
 /*   By: pprejith <pprejith@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 16:09:37 by pprejith          #+#    #+#             */
-/*   Updated: 2025/04/24 16:18:45 by pprejith         ###   ########.fr       */
+/*   Updated: 2025/05/19 16:38:13 by pprejith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,21 +40,28 @@ int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	int		num_char;
+	int		res;
 	int		i;
 
 	va_start(args, str);
 	num_char = 0;
-	i = 0;
-	while (str[i])
+	i = -1;
+	while (str[++i])
 	{
-		if (str[i] == '%')
+		if (str[i] == '%' && str[i + 1])
 		{
-			num_char += format_specifier(args, str[i + 1]);
-			i++;
+			res = format_specifier(args, str[++i]);
+			if (res == -1)
+				return (-1);
 		}
 		else
-			num_char += print_char(str[i]);
-		i++;
+		{
+			res = print_char(str[i]);
+			if (res == -1)
+				return (-1);
+		}
+		num_char += res;
 	}
-	return (num_char);
+	return (va_end(args), num_char);
 }
+

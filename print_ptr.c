@@ -6,7 +6,7 @@
 /*   By: pprejith <pprejith@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 20:44:27 by pprejith          #+#    #+#             */
-/*   Updated: 2025/03/29 20:51:15 by pprejith         ###   ########.fr       */
+/*   Updated: 2025/05/19 15:25:50 by pprejith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,10 @@ static int	hexa_helper_sizet(size_t n, char *range)
 
 int	print_ptr(void *ptr, char *range)
 {
-	int		i;
 	size_t	ptr1;
 	int		num_char;
 	int		hexa;
 
-	i = 0;
 	hexa = 0;
 	num_char = 0;
 	ptr1 = (size_t)ptr;
